@@ -1,0 +1,56 @@
+[data-theme='dark']{
+    --linear-color:#434343;
+    --linear-color-two:#04080F;
+    --basic-color:#FFF;
+}
+[data-theme='light']{
+    --linear-color:#DFE9F3;
+    --linear-color-two:#fff;
+    --basic-color:#000;
+}
+.About-page{
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(60deg, var(--linear-color),var(--linear-color-two));
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    align-items: center;
+    flex-direction: column;
+    overflow:hidden;
+}
+
+.heading-detail > h2 {
+    font-size: 2rem;
+    color: var(--basic-color);
+}
+.paragraph{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding: 0 3rem;
+    color: var(--basic-color);
+}
+.paragraph > p{
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.paragraph h2{
+    display: flex;
+    align-items: center;
+    padding-top: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    gap: 1.5rem;
+}
+.paragraph h2 .icon{
+    font-size: 1.8rem;
+}
+
+.image-div > img{
+    width: min(75vw,50rem);
+    aspect-ratio: 5/2;
+    border-radius: 20px;
+    background-color: rgba(0,0,0,0.3);
+}

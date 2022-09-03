@@ -1,0 +1,85 @@
+.movie-card[data-theme='light']{
+    --shadow-color:rgba(0,0,0,0.3);
+}
+.movie-card[data-theme='dark']{
+    --shadow-color:rgba(255,255,255,0.3);
+}
+
+.movie-card{
+    text-align: left;
+    position: relative;
+    width: 350px;
+    height: 480px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 7px 14px var(--shadow-color);
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom , transparent,transparent,rgba(0,0,0,0.85) 70%);
+    transition: .7s ease;
+    opacity: 0;
+}
+
+.movie-card:hover .overlay{
+    opacity: 1;
+}
+.overlay > .content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+    color: #fff;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+#name{
+    font-size: 1.8rem;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.text.release-date{
+    font-size: 1.2rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 0.1rem;
+    color: #F9C80E;
+}
+.rating{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+.rating > span > span{
+    font-weight: bold;
+}
+.rating > .imdb-rating{
+    font-size: 1.4rem;
+    text-align: center;
+    font-weight: 500;
+    color: #F9C80E;
+}
+.overlay > .content > span{
+    font-size: 1.2rem;
+}
+.overlay > .content > span > span{
+    font-weight: bold;
+
+}
+.overlay > .content > button{
+    height: 40px;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    background: #F9C80E;
+    font-size: 1.5rem;
+    color: rgb(41, 41, 41);
+    font-family: sans-serif;
+    font-weight: 600;
+}

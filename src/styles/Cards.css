@@ -1,0 +1,76 @@
+.Collection[data-theme='light']{
+    --trending-background-color:#E6EEF0;
+    --trending-text-color:#48485F;
+}
+.Collection[data-theme='dark']{
+    --trending-background-color:#48485F;
+    --trending-text-color:#E6EEF0;
+}
+.Collection{
+    padding: 1rem 2rem;
+    margin: .5rem auto;
+    width: 100vw;
+    font-size: 3rem;
+    letter-spacing: .1rem;
+    font-weight: bolder;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: left;
+    background-color: var(--trending-background-color);
+    color: var(--trending-text-color);
+    transform: translateX(-100%);
+    animation: fadein 1s ease forwards;
+}
+
+@keyframes fadein {
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+[data-theme='dark']{
+    --scroll-bar-color:rgba(255,255,255,0.8);
+    --scroll-bar-thumb-color:rgba(0,0,0,0.8);
+
+}
+[data-theme='light']{
+    --scroll-bar-color:rgba(0,0,0,0.8);
+    --scroll-bar-thumb-color:rgba(255,255,255,0.8);
+}
+.cards{
+    display: grid;
+    grid-auto-flow: column;
+    gap: 3rem;
+    width: 97vw;
+    overflow-x: auto;
+    padding: 2rem 3rem;
+}
+.cards::-webkit-scrollbar{
+    border-radius: 100vw;
+    height: 1rem;
+    padding: 0.5rem;
+    background-color: var(--scroll-bar-color);
+}
+.cards::-webkit-scrollbar-thumb{
+    background-color: var(--scroll-bar-thumb-color);
+    border-radius: 100vw;
+    cursor: pointer;
+}
+.cards::-webkit-scrollbar-thumb:hover{
+    opacity: .8;
+}
+
+.animated-bg{
+    height:480px ;
+    width:350px ;
+    background-image: linear-gradient(to right,#f6f7f8 8%,#edeef1 10%,#f6f7f8 20%,#f6f7f8 100%);
+    background-size: 200% 100%;
+    animation: bgPos 1s linear infinite;
+}
+@keyframes bgPos {
+    0%{
+        background-position: 50% 0;
+    }
+    100%{
+        background-position: -150% 0;
+    }    
+}   

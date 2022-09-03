@@ -1,0 +1,118 @@
+*,*::after,*::before{
+  box-sizing: border-box;
+  margin: 0;
+  transition: all 0.5s ease-out;
+}
+body{
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+:root{
+  --dark-bg-secondry-color:#303041; 
+  --dark-bg-secondry-color-hover:hsl(240, 15%, 14%); 
+  --basic-black-to-white-color:black;
+  --light-to-dark-secondry-color:#0EA2F6;
+  --dark-to-light-secondry-color:#3D3A50;
+  --dark-to-light-primary-color:#303041;
+  --light-to-dark-primary-color:#F4FCFE;
+}
+[data-theme="dark"]{
+  --basic-black-to-white-color:white;
+  --dark-bg-secondry-color:#f6fcfe; 
+  --dark-bg-secondry-color-hover:hsl(195, 80%, 90%); 
+  --light-to-dark-secondry-color:#3D3A50;
+  --dark-to-light-secondry-color:#0EA2F6;
+  --dark-to-light-primary-color:#F4FCFE;
+  --light-to-dark-primary-color:#303041;
+}
+
+.main-container{
+  width:100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--light-to-dark-primary-color);
+  padding-bottom: 5.5rem;
+}
+
+.upperNav{
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  justify-content: center;
+  background-color: var(--dark-to-light-secondry-color);
+  color: var(--light-to-dark-secondry-color);
+  padding:.5rem 1rem;
+  font-size: 1.5rem;
+}
+
+.darklightbutton-div{
+  position: absolute;
+  right: 0;
+  padding: .5rem 1rem;
+  top: 1rem;
+}
+.search-area-div{
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.search-box > form{
+  width: min(70rem,100vw);
+  margin: 1.5rem 0;
+  position: sticky;
+}
+
+.search-box > form > button,
+.search-box > form > input{
+  outline: none;
+  cursor: pointer;
+  border: none;
+  text-transform: capitalize;
+  color: var(--light-to-dark-primary-color);
+  font-size: 1.5rem;
+  background-color:var(--dark-bg-secondry-color) ;
+  padding: 1rem ;
+  font-weight: bold;
+}
+
+
+.search-box > form > input{
+  width: 40%;
+  border-top-left-radius:10px ;
+  border-bottom-left-radius:10px ;
+}
+.search-box > form > button{
+  width: 20%;
+  border-top-right-radius:10px ;
+  border-bottom-right-radius:10px ;
+  padding-left: .5rem;
+}
+
+.search-box > form >input:hover,
+.search-box > form >input:focus,
+.search-box > form >button:hover,
+.search-box > form >button:focus{
+  background-color: var(--dark-bg-secondry-color-hover);
+}
+
+.toggle:focus{
+  outline: 4px solid var(--basic-black-to-white-color);
+  border: none;
+  transition: 0s;
+}
+
+.logo{
+ text-transform: uppercase;
+}
+
+.Trending{
+  background-color: var(--light-to-dark-primary-color);
+}
+/* to do make searchbar font size to 1rem on screen width 350px */
+/* to do add top 4rem to .darklightbutton-div */
+/* to do add font-size 1.8 on .header and 2.4 on .header span  */

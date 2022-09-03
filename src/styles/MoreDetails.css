@@ -1,0 +1,110 @@
+[data-theme='dark']{
+    --scroll-bar-color:rgba(255,255,255,0.8);
+    --scroll-bar-thumb-color:rgba(0,0,0,0.8);
+    --light-to-dark-primary-color:#303041;
+    --dark-to-light-secondry-color:#0EA2F6;
+}
+[data-theme='light']{
+    --scroll-bar-color:rgba(0,0,0,0.8);
+    --scroll-bar-thumb-color:rgba(255,255,255,0.8);
+    --light-to-dark-primary-color:#F4FCFE;
+    --dark-to-light-secondry-color:#3D3A50;
+}
+.moreDetail {
+    padding-bottom: 5.5rem;
+    background-color: var(--light-to-dark-primary-color);
+    color: var(--dark-to-light-secondry-color);
+}
+.backdrop-image {
+    padding: 0;
+    height: 56vmin;
+    box-shadow: 0px 5px 10px 0px black;
+}
+
+.backdrop-image > img {
+    width: 100vw;
+    height: 100%;
+}
+.poster-image {
+    position: absolute;
+    width: min(36vw,22rem);
+    top: 12rem;
+    left: 5vw;
+    box-shadow: 0 6px 12px black;
+    background-color: black;
+}
+.poster-image > img {
+    height: inherit;
+    width: inherit;
+}
+.details {
+    display: flex;
+    flex-direction: column;
+    margin-left: min(45vw,32rem);
+    padding: 2rem 0;
+}
+.title-tagline > .title{
+    font-size: max(3.5vw,2.5rem);
+}
+.title-tagline > .tagline{
+    font-size: 1.5rem;
+}
+.details > .rating {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.more-details{
+    display: grid;
+    font-size: 1.2rem;
+    gap: .5rem;
+    padding-block: .75rem;
+    grid-template-columns: repeat(auto-fill,10rem);
+}
+.details> .genres{
+    display: flex;
+    gap: 1rem;
+    padding-block:.2rem ;
+    align-items: center;
+}
+.details> .genres > .genre{
+    padding: .5rem .8rem;
+    background-color: grey;
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 20px;
+}
+.details > .overview{
+    padding-block: 1rem;
+}
+.details > .overview > h2{
+    font-size: 2rem;
+} 
+.details > .overview > p{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.moreDetail > .videos {
+    border-top: 1px solid black;
+    padding: .5rem 2rem;
+    font-size: 1.5rem;
+}
+.video-trailer{
+    display: grid;
+    grid-auto-flow: column;
+    gap: 3rem;
+    width: 97vw;
+    overflow-x: auto;
+    padding: 2rem 3rem;
+}
+.video-trailer::-webkit-scrollbar{
+    border-radius: 100vw;
+    height: 1rem;
+    padding: 0.5rem;
+    background-color: var(--scroll-bar-color);
+}
+.video-trailer::-webkit-scrollbar-thumb{
+    background-color: var(--scroll-bar-thumb-color);
+    border-radius: 100vw;
+    cursor: pointer;
+}
